@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'material-demo';
-  isChecked = true;
-  onChange(event: any) {
-    console.log(event);
-  }
+  colors = [
+    { id: 1, name: 'Red' },
+    { id: 2, name: 'Green' },
+    { id: 3, name: 'Blue' }
+  ]
+  color = 1;
 }
