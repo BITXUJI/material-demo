@@ -1,17 +1,3 @@
-<mat-form-field> 
-  <mat-label>Username</mat-label>
-  <input 
-  ngModel
-  name="username"
-  #username="ngModel"
-  matInput 
-  type="text"
-  required
-  >
-  <mat-hint>Type a unique username.</mat-hint>
-  <span matSuffix>@gmail.com</span>
-  <span matPrefix>admin.&nbsp;</span>
-  <mat-error *ngIf="username.invalid&& username.errors?.['required']">
-    The username field is required.
-  </mat-error>
+<mat-form-field>
+  <textarea matInput cdkTextareaAutosize rows="2"></textarea>
 </mat-form-field>
