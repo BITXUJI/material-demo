@@ -1,12 +1,12 @@
-<button>Button 1</button>
-<button mat-button>Button 1</button>
-<button mat-raised-button>Button 2</button>
-<div>
-  <button mat-raised-button color="primary">Primary</button>
-  <button mat-raised-button color="accent">Accent</button>
-  <button mat-raised-button color="warn">Warn</button>
-  <button mat-raised-button disabled>Disabled</button>
-  <button mat-fab color="primary"><mat-icon>check</mat-icon></button>
-</div>
-
+<mat-chip-listbox>
+  <mat-chip-option 
+    *ngFor="let category of categories">
+    {{category.name}}
+  </mat-chip-option>
+</mat-chip-listbox>
+<mat-chip-listbox>
+  <mat-chip-option selected="true" color="accent">One</mat-chip-option>
+  <mat-chip-option color="warn">Two</mat-chip-option>
+  <mat-chip-option disabled="true">Disabled</mat-chip-option>
+</mat-chip-listbox>
   
