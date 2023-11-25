@@ -1,12 +1,3 @@
-<mat-chip-listbox>
-  <mat-chip-option 
-    *ngFor="let category of categories">
-    {{category.name}}
-  </mat-chip-option>
-</mat-chip-listbox>
-<mat-chip-listbox>
-  <mat-chip-option selected="true" color="accent">One</mat-chip-option>
-  <mat-chip-option color="warn">Two</mat-chip-option>
-  <mat-chip-option disabled="true">Disabled</mat-chip-option>
-</mat-chip-listbox>
+<mat-progress-spinner [value] ="progress"></mat-progress-spinner>
+<mat-spinner *ngIf="isLoading"></mat-spinner>
   
