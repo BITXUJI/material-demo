@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { delay, of, timer } from 'rxjs';
+import { MatDialog } from '@angular/material/dialog';
+import { EditCourseComponent } from './edit-course/edit-course.component';
 
 @Component({
   selector: 'app-root',
@@ -7,26 +8,13 @@ import { delay, of, timer } from 'rxjs';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  //at-progress-spinner
-  progress: number = 0;
-  timer;
-  //mat-spinner
-  isLoading: boolean = false;
+  constructor(private dialog: MatDialog) { }
 
-  constructor() {
-    //at-progress-spinner
-    this.timer = setInterval(() => {
-      this.progress++;
-      if (this.progress === 100) clearInterval(this.timer);
-    }, 10);
-    //mat-spinner
-    this.isLoading = true;
-    this.getCourses().subscribe(x => this.isLoading = false);
+  openDialog() {
+    this.dialog.open(EditCourseComponent)
+      .afterClosed().subscribe(
+        result => { console.log(result) }
+      );
 
-  }
-  //mat-spinner
-  getCourses() {
-    // return timer(2000);
-    return of({}).pipe(delay(2000));
   }
 }
