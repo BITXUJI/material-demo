@@ -1,0 +1,18 @@
+$color: green;
+
+@mixin soft-border($border-radius) {
+    border: 1px solid #ccc;
+    border-radius: $border-radius;
+    padding: 10px;
+}
+
+h1 {
+    color: $color;
+    @include soft-border(5px);
+    //...
+}
+
+h2 {
+    color: $color;
+    @include soft-border(20px);
+}
