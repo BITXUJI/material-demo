@@ -11,7 +11,10 @@ export class AppComponent {
   constructor(private dialog: MatDialog) { }
 
   openDialog() {
-    this.dialog.open(EditCourseComponent)
+    this.dialog.open(EditCourseComponent,
+      {
+        data: { courseID: 1 }
+      })
       .afterClosed().subscribe(
         result => { console.log(result) }
       );
